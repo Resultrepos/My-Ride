@@ -81,7 +81,7 @@ export default class rideOfferController {
                     .json({
                         data: {
                             NewOffer: newOffer,
-                        },.js
+                        },
                         message: 'New ride offer created successfully',
                         status: 'success',
                     });
