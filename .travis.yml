@@ -1,18 +1,7 @@
 language: node_js
 node_js:
   - "7"
-  - "6"
-  - "5"
-  - "4"
+ 
 
 script: npm test
 
-jobs:
-  include:
-    - stage: npm release
-      node_js: "7"
-      script: npm test
-      deploy:
-        provider: npm
-        api_key: $NPM_API_KEY
-        on: deploy-npm-release
