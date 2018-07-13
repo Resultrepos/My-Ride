@@ -5,7 +5,7 @@ node_js:
   - "5"
   - "4"
 
-script: echo "Running tests against $(node -v) ..."
+script: npm test
 
 jobs:
   include:
