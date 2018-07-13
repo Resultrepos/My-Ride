@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "npm run build && mocha server/test/*.js --require babel-register --reporter spec || exit 0",
+    "test": "npm run build && mocha server/test/*.js --require babel-register --reporter spec --exit",
     "build": "babel server -d ./dist",
     "lint": "./node_modules/.bin/eslint server/app.js",
     "start": "npm run build && babel-node server/app.js"
