@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "npm run build && mocha server/test/*.js --require babel-register --reporter spec --exit",
-    "coverage": "istanbul cover npm test",
+    "coverage": "istanbul cover -x *.test.js _mocha -- -R spec server/test/*.js",
     "build": "babel server -d ./dist",
     "lint": "./node_modules/.bin/eslint server/app.js",
     "start": "npm run build && babel-node server/app.js"
